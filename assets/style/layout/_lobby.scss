@@ -1,0 +1,55 @@
+.lobby {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border: 5px solid $color2;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  width: 300px;
+  cursor: pointer;
+
+  h2 {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  i {
+    font-size: 5rem;
+  }
+
+  .add-container {
+    color: $color1;
+    background: $color2;
+    border-radius: 23px 0 0 23px;
+    display: grid;
+    place-items: center;
+
+    &:hover {
+      color: $color2;
+      background: $color1;
+    }
+    &:hover + .random-container {
+      color: $color1;
+      background: $color2;
+    }
+  }
+  .random-container {
+    color: $color2;
+    background: $color1;
+    border-radius: 0 23px 23px 0;
+    display: grid;
+    place-items: center;
+
+    &:hover {
+      color: $color1;
+      background: $color2;
+    }
+    &:hover + .add-container {
+      color: $color2;
+      background: $color1;
+    }
+  }
+}
