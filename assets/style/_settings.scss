@@ -1,6 +1,8 @@
 //colors
 $color1: rgb(245, 245, 245);
 $color2: rgb(24, 24, 24);
+$color3: rgb(6, 33, 76);
+$color4: rgb(75, 74, 74);;
 
 //fonts
 @font-face {
@@ -27,8 +29,10 @@ body {
   text-align: center;
   min-height: 100vh;
   overflow: hidden;
+  background: $color3;
 }
 h1 {
   margin-top: 30px;
   margin-bottom: 50px;
+  color: $color1;
 }

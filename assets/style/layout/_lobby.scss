@@ -12,12 +12,12 @@
   cursor: pointer;
 
   h2 {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
   }
 
   i {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .add-container {
@@ -31,10 +31,6 @@
       color: $color2;
       background: $color1;
     }
-    &:hover + .random-container {
-      color: $color1;
-      background: $color2;
-    }
   }
   .random-container {
     color: $color2;
@@ -46,10 +42,6 @@
     &:hover {
       color: $color1;
       background: $color2;
-    }
-    &:hover + .add-container {
-      color: $color2;
-      background: $color1;
     }
   }
 }
