@@ -83,12 +83,58 @@ h1 {
           transform: translate(-50%, -50%);
   border-radius: 20px;
 }
+.addSong h2 {
+  margin: 30px 0 50px;
+  letter-spacing: 1px;
+}
 .addSong form {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 35% 65%;
   grid-template-areas: "label input" "label input" "button button";
   gap: 40px;
 }
-.addSong button {
+.addSong form label {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  place-self: center;
+}
+.addSong form input {
+  width: 70%;
+  color: rgb(245, 245, 245);
+  font-size: 1.2rem;
+  padding: 15px 10px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  border: 1px solid rgb(245, 245, 245);
+  border-radius: 20px;
+  background: none;
+  letter-spacing: 1px;
+}
+.addSong form input:focus {
+  border: 1px solid rgb(17, 55, 222);
+}
+.addSong form button {
+  margin-top: 10px;
   grid-area: button;
+  background: rgb(6, 33, 76);
+  color: rgb(245, 245, 245);
+  padding: 15px 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 20px;
+  width: 30%;
+  place-self: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  border: 1px solid transparent;
+}
+.addSong form button:hover {
+  border: 1px solid rgb(6, 33, 76);
+  background: rgb(17, 55, 222);
+}
+.addSong form button:active {
+  -webkit-transform: scale(105%);
+      -ms-transform: scale(105%);
+          transform: scale(105%);
 }/*# sourceMappingURL=index.css.map */

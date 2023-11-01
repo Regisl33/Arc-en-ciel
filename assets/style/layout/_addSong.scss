@@ -9,18 +9,64 @@
   transform: translate(-50%, -50%);
   border-radius: 20px;
 
+  h2{
+    margin: 30px 0 50px;
+    letter-spacing: 1px;
+  }
+
   form{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 35% 65%;
     grid-template-areas: 
     "label input"
     "label input"
     "button button"
     ;
     gap: 40px;
-  }
-  button{
-    grid-area: button;
-  }
 
+    label{
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      place-self: center;
+    }
+    input{
+      width: 70%;
+      color: $color1;
+      font-size: 1.2rem;
+      padding: 15px 10px;
+      transition: 0.3s ease;
+      border: 1px solid $color1;
+      border-radius: 20px;
+      background: none;
+      letter-spacing: 1px;
+
+      &:focus{
+        border: 1px solid $color5;
+      }
+    }
+
+    button{
+      margin-top: 10px;
+      grid-area: button;
+      background: $color3;
+      color: $color1;
+      padding: 15px 10px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      border-radius: 20px;
+      width: 30%;
+      place-self: center;
+      cursor: pointer;
+      transition: 0.3s ease;
+      border: 1px solid transparent;
+
+      &:hover{
+        border: 1px solid $color3;
+        background: $color5;
+      }
+      &:active{
+        transform: scale(105%);
+      }
+    }
+  }
 }

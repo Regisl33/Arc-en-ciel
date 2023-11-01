@@ -13,5 +13,31 @@ const display = {
     </div>
     `;
   },
+  addSongDisplay: function () {
+    app.innerHTML = `
+      <div class="addSong" id="addSong">
+        <h2>Add a Song</h2>
+        <form action="">
+          <label for="number">Number :</label>
+          <input
+            type="text"
+            id="number"
+            placeholder="123"
+            maxlength="3"
+            required
+          />
+          <label for="title">Title :</label>
+          <input
+            type="text"
+            id="title"
+            placeholder="Entre the title of the song"
+            required
+          />
+          <button type="submit">Add +</button>
+        </form>
+      </div>
+    `;
+  },
 };
 // display.lobby();
+// display.addSongDisplay();
