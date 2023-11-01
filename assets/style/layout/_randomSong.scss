@@ -1,0 +1,39 @@
+.randomSong{
+  font-size: 1.2rem;
+  color: $color1;
+  letter-spacing: 1px;
+  
+  h2{
+    margin-bottom: 40px;
+  }
+
+  span{
+    margin: 0 10px;
+  }
+
+  button{
+    display: block;
+    margin: 25px auto;
+    background: $color5;
+    color: $color1;
+    padding: 15px 25px;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+
+    &:hover{
+      border: 2px solid $color5;
+      background: $color3;
+    }
+    &:active{
+      transform: scale(105%);
+      background: $color5;
+    }
+  }
+
+  ul{
+    margin-top: 50px;
+  }
+}

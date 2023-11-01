@@ -137,4 +137,42 @@ h1 {
   -webkit-transform: scale(105%);
       -ms-transform: scale(105%);
           transform: scale(105%);
+}
+
+.randomSong {
+  font-size: 1.2rem;
+  color: rgb(245, 245, 245);
+  letter-spacing: 1px;
+}
+.randomSong h2 {
+  margin-bottom: 40px;
+}
+.randomSong span {
+  margin: 0 10px;
+}
+.randomSong button {
+  display: block;
+  margin: 25px auto;
+  background: rgb(17, 55, 222);
+  color: rgb(245, 245, 245);
+  padding: 15px 25px;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+.randomSong button:hover {
+  border: 2px solid rgb(17, 55, 222);
+  background: rgb(6, 33, 76);
+}
+.randomSong button:active {
+  -webkit-transform: scale(105%);
+      -ms-transform: scale(105%);
+          transform: scale(105%);
+  background: rgb(17, 55, 222);
+}
+.randomSong ul {
+  margin-top: 50px;
 }/*# sourceMappingURL=index.css.map */

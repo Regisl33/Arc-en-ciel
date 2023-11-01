@@ -38,6 +38,16 @@ const display = {
       </div>
     `;
   },
+  randomSongDisplay: function () {
+    app.innerHTML = `
+    <div class="randomSong" id="randomSong">
+      <h2>Get Random Songs</h2>
+      <input type="range" value="5" min="1" max="15" />
+      <span id="rangeDisplay">5</span>
+      <button>Randomize <i class="fa-solid fa-rotate"></i></button>
+      <ul id="output"></ul>
+    </div>
+    `;
+  },
 };
-// display.lobby();
-// display.addSongDisplay();
+display.lobby();
