@@ -1,4 +1,5 @@
 let data = [];
+let dataDisplay = [];
 
 class Song {
   constructor(id, num, title) {
@@ -16,9 +17,27 @@ const utils = {
     title = titleInput.value;
     song = new Song(id, num, title);
     data.push(song);
+    console.log(data);
     localStorage.songs = JSON.stringify(data);
   },
-  getRandomSong: function () {},
+  displayRandomSong: function () {
+    output.innerHTML = dataDisplay
+      .map(
+        (song) => `
+    <li>${song.num} : ${song.title}</li>
+    `
+      )
+      .join("");
+  },
+  getRandomSong: function () {
+    let value = "";
+    for (let i = 0; i < range.value; i++) {
+      let x = Math.floor(Math.random() * data.length);
+      value = data[x];
+      dataDisplay.push(value);
+    }
+    utils.displayRandomSong();
+  },
 };
 
 const display = {
@@ -35,8 +54,8 @@ const display = {
       </div>
     </div>
     `;
-    addSong.addEventListener("click", display.addSongDisplay);
-    randomSong.addEventListener("click", display.randomSongDisplay);
+    addSong.addEventListener("click", this.addSongDisplay);
+    randomSong.addEventListener("click", this.randomSongDisplay);
   },
   addSongDisplay: function () {
     app.innerHTML = `
@@ -60,6 +79,7 @@ const display = {
           />
           <button type="submit">Add +</button>
         </form>
+        <button id="switchButton" class="random">Randomize <i class="fa-solid fa-rotate"></i></button>
       </div>
     `;
     form.addEventListener("submit", (e) => {
@@ -68,6 +88,7 @@ const display = {
       number.value = "";
       titleInput.value = "";
     });
+    switchButton.addEventListener("click", display.randomSongDisplay);
   },
   randomSongDisplay: function () {
     app.innerHTML = `
@@ -82,7 +103,6 @@ const display = {
     range.addEventListener("input", () => {
       rangeDisplay.textContent = range.value;
     });
-
     random.addEventListener("click", utils.getRandomSong);
   },
 };

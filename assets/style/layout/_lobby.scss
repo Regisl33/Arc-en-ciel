@@ -31,6 +31,10 @@
       color: $color2;
       background: $color1;
     }
+    &:hover ~ .random-container{
+      color: $color1;
+      background: $color2;
+    }
   }
   .random-container {
     color: $color2;
@@ -42,6 +46,10 @@
     &:hover {
       color: $color1;
       background: $color2;
+    }
+    &:hover ~ .add-container{
+      color: $color2;
+      background: $color1;
     }
   }
 }
