@@ -2,8 +2,7 @@ let data = [];
 let dataDisplay = [];
 
 class Song {
-  constructor(id, num, title) {
-    this.id = id;
+  constructor(num, title) {
     this.num = num;
     this.title = title;
   }
@@ -11,31 +10,48 @@ class Song {
 
 const utils = {
   createSong: function () {
-    let id, num, title, song;
-    id = data.length;
+    let num,
+      title,
+      song,
+      unique = true;
     num = number.value;
     title = titleInput.value;
-    song = new Song(id, num, title);
-    data.push(song);
-    console.log(data);
+    song = new Song(num, title);
+    data.map((data) => {
+      if (data.num === song.num) unique = false;
+    });
+    if (unique) {
+      data.push(song);
+    } else {
+      alert("This song already exists and must be unique!");
+    }
     localStorage.songs = JSON.stringify(data);
   },
   displayRandomSong: function () {
     output.innerHTML = dataDisplay
       .map(
         (song) => `
-    <li>${song.num} : ${song.title}</li>
+    <li>${song[0].num} : ${song[0].title}</li>
     `
       )
       .join("");
   },
-  getRandomSong: function () {
-    let value = "";
-    for (let i = 0; i < range.value; i++) {
-      let x = Math.floor(Math.random() * data.length);
-      value = data[x];
-      dataDisplay.push(value);
+  randomizeSongs: function (array) {
+    const newArray = [...array];
+    const lenght = newArray.length;
+
+    for (let start = 0; start < lenght; start++) {
+      const randomPosition = Math.floor(
+        (newArray.length - start) * Math.random()
+      );
+      const randomItem = newArray.splice(randomPosition, 1);
+
+      newArray.push(randomItem);
     }
+    dataDisplay = newArray.slice(0, range.value);
+  },
+  getRandomSong: function () {
+    utils.randomizeSongs(data);
     utils.displayRandomSong();
   },
 };
