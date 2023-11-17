@@ -27,13 +27,9 @@
     display: grid;
     place-items: center;
 
-    &:hover {
+    &:hover{
       color: $color2;
       background: $color1;
-    }
-    &:hover ~ .random-container{
-      color: $color1;
-      background: $color2;
     }
   }
   .random-container {
@@ -43,13 +39,17 @@
     display: grid;
     place-items: center;
 
-    &:hover {
+    &:hover{
       color: $color1;
       background: $color2;
     }
-    &:hover ~ .add-container{
-      color: $color2;
-      background: $color1;
-    }
+  }
+  .black{
+    background: $color2;
+    color: $color1;
+  }
+  .white{
+    background: $color1;
+    color: $color2;
   }
 }

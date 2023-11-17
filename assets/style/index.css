@@ -58,10 +58,6 @@ h1 {
   color: rgb(24, 24, 24);
   background: rgb(245, 245, 245);
 }
-.lobby .add-container:hover ~ .random-container {
-  color: rgb(245, 245, 245);
-  background: rgb(24, 24, 24);
-}
 .lobby .random-container {
   color: rgb(24, 24, 24);
   background: rgb(245, 245, 245);
@@ -73,9 +69,13 @@ h1 {
   color: rgb(245, 245, 245);
   background: rgb(24, 24, 24);
 }
-.lobby .random-container:hover ~ .add-container {
-  color: rgb(24, 24, 24);
+.lobby .black {
+  background: rgb(24, 24, 24);
+  color: rgb(245, 245, 245);
+}
+.lobby .white {
   background: rgb(245, 245, 245);
+  color: rgb(24, 24, 24);
 }
 
 .addSong {

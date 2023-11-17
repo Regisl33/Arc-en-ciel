@@ -71,7 +71,19 @@ const display = {
     </div>
     `;
     addSong.addEventListener("click", this.addSongDisplay);
+    addSong.addEventListener("mouseover", () => {
+      randomSong.classList.add("black");
+    });
+    addSong.addEventListener("mouseout", () => {
+      randomSong.classList.remove("black");
+    });
     randomSong.addEventListener("click", this.randomSongDisplay);
+    randomSong.addEventListener("mouseover", () => {
+      addSong.classList.add("white");
+    });
+    randomSong.addEventListener("mouseout", () => {
+      addSong.classList.remove("white");
+    });
   },
   addSongDisplay: function () {
     app.innerHTML = `
